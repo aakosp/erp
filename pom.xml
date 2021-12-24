@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.aako</groupId>
+    <artifactId>EasyERP</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>common</module>
+        <module>area</module>
+        <module>erp</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.6.1</spring-boot.version>
+
+        <!-- 三方依赖版本 -->
+        <shiro.version>1.7.1</shiro.version>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
+        <cola.version>3.4.3.4</cola.version>
+        <lang.version>3.12.0</lang.version>
+        <hutool.version>5.7.17</hutool.version>
+        <lombok.version>1.18.22</lombok.version>
+        <knife4j.version>3.0.3</knife4j.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.aliyun</groupId>-->
+            <!--                <artifactId>cola-core</artifactId>-->
+            <!--                <version>${cola.version}</version>-->
+            <!--                <type>jar</type>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.aliyun</groupId>-->
+            <!--                <artifactId>cola-common</artifactId>-->
+            <!--                <version>${cola.version}</version>-->
+            <!--                <type>jar</type>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.1</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-core</artifactId>
+                <version>5.7.17</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
+            <!--            <dependency>-->
+            <!--                <groupId>com.taobao.arthas</groupId>-->
+            <!--                <artifactId>arthas-spring-boot-starter</artifactId>-->
+            <!--                <version>3.4.8</version>-->
+            <!--                <type>jar</type>-->
+            <!--            </dependency>-->
+        </dependencies>
+    </dependencyManagement>
+
+</project>
